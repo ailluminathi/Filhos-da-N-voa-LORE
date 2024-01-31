@@ -1,0 +1,649 @@
+* {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fontes/Montserrat-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fontes/Montserrat-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url(fontes/CinzelDecorative-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    src: url(fontes/CinzelDecorative-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --preto: #0B0A0A;
+    --branco: #E3DEE2;
+    --vermelho: #8f0404;
+    --amarelo: #F5AB00;
+
+    --fonte-padrao: 'Montserrat', sans-serif;
+    --fonte-secundaria: 'Cinzel Decorative', serif;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: var(--fonte-padrao);
+    overflow-x: hidden;
+}
+
+img {
+    user-select: none;
+}
+
+header img {
+    width: 70px;
+    position: absolute;
+    margin: 20px;
+    margin-left: 90px;
+    transition: 3.5s ease;
+}
+
+header img:hover {
+    transform: translateX(40px);
+}
+
+nav {
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--vermelho);
+    font-weight: 700;
+    font-size: 1.5em;
+    position: relative;
+    padding: 5px;
+}
+
+.nav_link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--vermelho);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav_link:hover::before {
+    width: 100%;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 4em;
+    color: var(--vermelho);
+    font-weight: 700;
+    font-family: var(--fonte-secundaria);
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    cursor: default;
+    user-select: none;
+    text-shadow: 0px 0px 5px rgba(252, 0, 0, 0.137);
+}
+
+header h1::first-letter {
+    font-size: 1.25em;
+}
+
+.span-b {
+    font-size: .5em;
+}
+
+.main__lore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-bottom: 500px;
+    box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.336);
+}
+
+.part-0 {
+    display: flex;
+    width: 90vw;
+    justify-content: flex-end;
+
+    background-image: url("assets/nevoa.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+}
+
+.part-0 .container__paragrafo {
+    width: 60vw;
+    padding-left: 155px;
+    padding-right: 0;
+    background-image: linear-gradient(to left, #0B0A0A, #0B0A0A, #0B0A0A, #0b0a0af5, #0b0a0ab2, transparent);
+}
+
+.part-1 {
+    display: flex;
+    width: 90vw;
+
+    background-image: url("assets/city3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+}
+
+.container__paragrafo {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 20px;
+    padding-top: 5px;
+    padding-right: 50px;
+
+    background-image: linear-gradient(to right, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, transparent);
+}
+
+.container__paragrafo__titulos {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.25em;
+}
+
+.container__paragrafo p {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.568);
+}
+
+.part-2 {
+    display: flex;
+    width: 90vw;
+    justify-content: flex-end;
+
+    background-image: url("assets/room.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+}
+
+.part-2 .container__paragrafo {
+    padding-right: 0;
+    background-image: linear-gradient(to left, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, transparent);
+}
+
+.part-3 {
+    display: flex;
+    width: 90vw;
+
+    background-image: url("assets/lua.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+
+    margin-bottom: 100px;
+}
+
+footer {
+    text-align: center;
+    font-size: .90em;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.034);
+    width: 100vw;
+}
+footer a {
+    text-decoration: none;
+    color: var(--vermelho);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--vermelho);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--preto)
+}
+
+.container__membros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.container__membros__items {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+}
+
+h4 {
+    color: var(--preto);
+    background-color: var(--vermelho);
+    padding: 7px 20px;
+    border-radius: 15px 15px 0px 0px;
+    font-weight: 700;
+    font-size: 1.5em;
+    user-select: none;
+}
+
+.container__membros__items img {
+    width: 50%;
+    border-radius: 30px 5px;
+    border: 1px solid var(--vermelho);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.container__membros__items h3 {
+    color: var(--vermelho);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.container__membros__items p {
+    width: 50%;
+}
+
+.tequilala_logo {
+    width: 25vw;
+    margin-bottom: 10px;
+}
+
+.container__tequilala {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.container__tequilala__lore {
+    width: 60vw;
+    line-height: 1.5;
+}
+
+.container__tequilala__lore p:first-of-type::first-letter {
+    font-size: 1.5em;
+}
+
+.container__tequilala__lore p {
+    margin-bottom: 10px;
+}
+
+.container__tequilala__lore h2 {
+    color: var(--amarelo);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* carrosel */
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 450px;
+}
+
+.swiper-slide img {
+    max-width: 70vw;
+    height: 430px;
+    display: inline-block;
+}
+
+.swiper-pagination {
+    margin: .5em 0;
+}
+.carrosel {
+    max-width: 70vw;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--amarelo);
+}
+
+.swiper__paragrafo {
+    color: rgba(255, 255, 255, 0.329);
+}
+
+.menu_tequilala {
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.body__tradicoes {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__tradicoes {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container__tradicoes__titulo {
+    font-size: 1.75em;
+    font-weight: 700;
+    color: var(--vermelho);
+    margin-bottom: 50px;
+    font-family: var(--fonte-secundaria);
+    text-transform: uppercase;
+    align-self: center;
+}
+
+.container__tradicoes__cerimonia {
+    width: 50%;
+    align-self: center;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.068);
+    padding: 20px;
+    border: 1px solid var(--vermelho);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.cerimonia__icon {
+    width: 50px;
+    padding: 10px;
+}
+
+.container__tradicoes__cerimonia__titulo {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-shadow: 2px 2px 3px black;
+}
+
+.container__tradicoes__cerimonia__texto {
+    margin-bottom: 7px;
+    line-height: 1.25;
+    font-size: 1em;
+}
+
+.frases {
+    color: rgba(255, 255, 255, 0.459);
+}
+
+.body__area-membros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__area-membro {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.021);
+    border-radius: 50px;
+    padding: 40px;
+    border: 1px solid var(--vermelho);
+}
+
+.container__area-membro__opcoes__titulo {
+    font-size: 2.5em;
+    color: var(--vermelho);
+    font-family: var(--fonte-secundaria);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container__area-membro__opcoes p {
+    color: var(--branco);
+}
+
+.container__area-membro__opcoes__lista {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.container__area-membro__opcoes__lista__item a {
+    text-decoration: none;
+    border: 1px solid var(--vermelho);
+    border-radius: 20px;
+    padding: 10px;
+    color: var(--vermelho);
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.container__area-membro__opcoes__lista__item a:hover {
+    background-color: var(--vermelho);
+    color: var(--preto);
+    box-shadow: 0px 0px 15px var(--vermelho);
+}
+
+.footer__acesso-membros {
+    margin-top: 500px;
+}
+
+.container__login {
+    width: 40vw;
+    display: flex;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 20vw;
+}
+
+.login label {
+    color: var(--vermelho);
+    font-weight: 600;
+}
+
+#inome, #isenha {
+    margin-bottom: 20px;
+}
+
+input {
+    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid var(--vermelho);
+    margin-top: 5px;
+    color: #8f0404;
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+input:focus-within {
+    outline: none;
+}
+
+.login button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100px;
+    font-weight: 700;
+    align-self: center;
+    background-color: var(--vermelho);
+    cursor: pointer;
+    outline: 1px solid var(--preto);
+    box-shadow: 2px 2px 3px var(--preto);
+    transition: .5s ease;
+    color: var(--preto);
+}
+
+.login button:hover {
+    transform: translateX(-1px);
+    transform: translateY(-1px);
+    box-shadow: 0px 0px 10px var(--vermelho);
+}
+
+strong {
+    font-weight: 700;
+    color: var(--vermelho);
+}
+
+@media (max-width:750px) {
+
+    header img {
+        display: none;
+    }
+
+    .container__membros {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container__membros__items {
+        width: 100%;
+    }
+    
+    .container__membros__items img {
+        width: 80%;
+        border-radius: 30px 5px;
+        border: 1px solid var(--vermelho);
+        padding: 10px;
+    }
+
+    .container__membros__items h3 {
+        font-size: 2em;
+    }
+    
+    .container__membros__items p {
+        font-size: 1.5em;
+    }
+
+    .container__tequilala__lore img {
+        width: 40vw;
+    }
+
+    .container__tequilala__lore p {
+        font-size: 1em;
+    }
+
+    .part-1 {
+        display: flex;
+        width: 90vw;
+        box-sizing: border-box;
+    }
+    
+    .container__paragrafo {
+        width: 90vw;
+        height: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+        line-height: 1.5;
+        padding: 20px;
+        padding-right: 50px;
+        box-shadow: none;
+    
+        background-image: linear-gradient(to right, #0B0A0A, #0B0A0A);
+    }
+
+    .part-2 .container__paragrafo {
+        background-image: linear-gradient(to left, #0B0A0A, #0B0A0A);
+    }
+
+    .part-0 .container__paragrafo {
+        background-image: linear-gradient(to right, #0B0A0A, #0B0A0A);
+        width: 90vw;
+        height: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+        line-height: 1.5;
+        padding: 20px;
+        padding-right: 50px;
+    }
+
+
+    /* carrossel */
+
+    .swiper-slide {
+        height: 200px;
+    }
+    
+    .swiper-slide img {
+        height: 200px;
+    }
+    
+    .swiper__paragrafo {
+        color: rgba(255, 255, 255, 0.329);
+        margin-top: 5px;
+    }
+    
+    .menu_tequilala {
+        width: 90vw;
+    }
+
+    .container__tradicoes {
+        width: 100vw;
+    }
+
+    .container__tradicoes__cerimonia {
+        width: 90%;
+    }
+}
