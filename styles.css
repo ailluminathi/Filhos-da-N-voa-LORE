@@ -201,7 +201,42 @@ header h1::first-letter {
     background-image: linear-gradient(to left, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, transparent);
 }
 
+.part-4 {
+    display: flex;
+    width: 90vw;
+    justify-content: flex-end;
+
+    background-image: url("assets/city4.jpg");
+    background-size: contain;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+}
+
+.part-4 .container__paragrafo {
+    padding-right: 0;
+    background-image: linear-gradient(to left, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, transparent);
+}
+
+.part-2 .container__paragrafo {
+    padding-right: 0;
+    background-image: linear-gradient(to left, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, #0B0A0A, transparent);
+}
+
 .part-3 {
+    display: flex;
+    width: 90vw;
+
+    background-image: url("assets/lua.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    box-sizing: border-box;
+
+    margin-bottom: 100px;
+}
+
+.part-5 {
     display: flex;
     width: 90vw;
 
@@ -220,6 +255,7 @@ footer {
     padding: 7px;
     background-color: rgba(255, 255, 255, 0.034);
     width: 100vw;
+    margin-top: 150px;
 }
 footer a {
     text-decoration: none;
@@ -605,6 +641,10 @@ strong {
     }
 
     .part-2 .container__paragrafo {
+        background-image: linear-gradient(to left, #0B0A0A, #0B0A0A);
+    }
+
+    .part-4 .container__paragrafo {
         background-image: linear-gradient(to left, #0B0A0A, #0B0A0A);
     }
 
